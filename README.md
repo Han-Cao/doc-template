@@ -33,13 +33,13 @@ The Just the Docs theme automatically includes the [`jekyll-seo-tag`] plugin.
 To add an extra plugin, you need to add it in the `Gemfile` *and* in `_config.yml`. For example, to add [`jekyll-default-layout`]:
 
 - Add the following to your site's `Gemfile`:
-
+  
   ```ruby
   gem "jekyll-default-layout"
   ```
 
 - And add the following to your site's `_config.yml`:
-
+  
   ```yaml
   plugins:
     - jekyll-default-layout
@@ -49,36 +49,37 @@ Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key inst
 
 ## Publishing your site on GitHub Pages
 
-1.  If your created site is `YOUR-USERNAME/YOUR-SITE-NAME`, update `_config.yml` to:
+1. If your created site is `YOUR-USERNAME/YOUR-SITE-NAME`, update `_config.yml` to:
+   
+   ```yaml
+   title: YOUR TITLE
+   description: YOUR DESCRIPTION
+   theme: just-the-docs
+   
+   url: https://YOUR-USERNAME.github.io/YOUR-SITE-NAME
+   
+   aux_links: # remove if you don't want this link to appear on your pages
+     Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
+   ```
 
-    ```yaml
-    title: YOUR TITLE
-    description: YOUR DESCRIPTION
-    theme: just-the-docs
+2. Push your updated `_config.yml` to your site on GitHub.
 
-    url: https://YOUR-USERNAME.github.io/YOUR-SITE-NAME
-
-    aux_links: # remove if you don't want this link to appear on your pages
-      Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
-    ```
-
-2.  Push your updated `_config.yml` to your site on GitHub.
-
-3.  In your newly created repo on GitHub:
-    - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
-    - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
+3. In your newly created repo on GitHub:
+   
+   - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
+   - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
 
 ## Building and previewing your site locally
 
 Assuming [Jekyll] and [Bundler] are installed on your computer:
 
-1.  Change your working directory to the root directory of your site.
+1. Change your working directory to the root directory of your site.
 
-2.  Run `bundle install`.
+2. Run `bundle install`.
 
-3.  Run `bundle exec jekyll serve` to build your site and preview it at `localhost:4000`.
-
-    The built site is stored in the directory `_site`.
+3. Run `bundle exec jekyll serve  --config _config_local.yml` to build your site and preview it at `localhost:4000`.
+   
+   The built site is stored in the directory `_site`.
 
 ## Publishing your built site on a different platform
 
