@@ -1,10 +1,11 @@
 title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+description: A modified template for a Jeykll site using the Just the Docs theme!
 
 theme: just-the-docs
 
 # replace with your url
 url: https://Han-Cao.github.io
+baseurl: /doc-template
 
 aux_links:
   View on Github: https://github.com/Han-Cao/doc-template
